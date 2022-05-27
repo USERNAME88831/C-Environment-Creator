@@ -23,6 +23,7 @@ createLib() {
 	echo "FINISHED: Creating $srcLib"
 	echo "All done!"
 	cd ..
+	sud -i "1 i\#include \"includeFiles/$headerLib\"" main.c
 
 	headerFile=$(readlink -f "includeFiles/$headerLib")
 	srcFile=$(readlink -f "src/$srcLib")
